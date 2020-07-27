@@ -26,6 +26,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Main.apps.MainConfig',
+    'Community.apps.CommunityConfig',
+    'Introduce.apps.IntroduceConfig',
+    'Member.apps.MemberConfig',
+    'Recommand.apps.RecommandConfig',
 ]
 
 MIDDLEWARE = [
@@ -107,3 +111,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# static 파일들이 현재 어디에 있는가?
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'portfolio', 'static')
+]
+
+# static 파일들이 어디로 모을 것인가?
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
